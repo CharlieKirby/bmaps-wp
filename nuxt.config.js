@@ -1,7 +1,7 @@
 import axios from "axios"
 let dynamicRoutes = () => {
   const routes = axios
-    .get("http://nexus.waxyworld.co.uk/wp-json/wp/v2/business_broadband?page=1&per_page=20")
+    .get("https://nexus.waxyworld.co.uk/wp-json/wp/v2/business_broadband?page=1&per_page=20")
     .then(res => {
       return res.data.map(post => `/blog/${post.slug}`)
     })
